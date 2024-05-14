@@ -1,7 +1,27 @@
 main {
 	padding: 25px;
 }
-
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+	background-image: url('../img/global/art4.png');
+	filter: blur(3px);
+	background-size: cover;
+	background-attachment: fixed;
+}
+body {
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
 main .top {
 	display: flex;
 	justify-content: space-between;
@@ -23,6 +43,7 @@ main .top a {
 	text-decoration: none;
 	display: inline-block;
 	transition: transform 0.3s ease;
+	color: beige;
 
 }
 a:hover {
@@ -32,13 +53,20 @@ a:hover {
 main .top a,
 main .top a:active,
 main .top a:visited {
-	color: #505356;
+	color: beige;
 }
 
 
 main .info {
 	margin-top: 50px;
 	padding: 0 300px;
+	border: 3px solid rgb(134, 128, 128);
+    padding: 20px;
+	width: 700px;
+	text-align: center;
+	border-radius: 10px;
+	height: 365px;
+	border-color: beige;
 }
 
 main .info h3 {
@@ -57,6 +85,49 @@ main .info ul {
 	font-weight: 700;
 	padding-bottom: 10px;
 }
+.rank-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+	border: 2px solid;
+	border-color: beige;
+	border-radius: 5px;
+	padding: 5px;
+}
+label {
+	display: inline-block;
+	margin: 25px;
+	padding: 5px 10px 5px;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+.currentRankSelection {
+	margin-top: 50px;
+	padding: 0 300px;
+	border: 3px solid rgb(134, 128, 128);
+    padding: 20px;
+	width: 700px;
+	text-align: center;
+	border-radius: 10px;
+	height: 365px;
+	border-color: beige;
+}
+.desiredRankSelection {
+	margin-top: 50px;
+	padding: 0 300px;
+	border: 3px solid rgb(134, 128, 128);
+    padding: 20px;
+	width: 700px;
+	text-align: center;
+	border-radius: 10px;
+	height: 365px;
+	border-color: beige;
+}
+
 
 @media screen and (max-width: 768px) {
 	main .info {

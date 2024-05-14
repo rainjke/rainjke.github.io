@@ -30,8 +30,11 @@ header {
 	align-items: flex-end;
 	width: 100%;
 	padding: 15px 30px;
-	background-color: lightskyblue;
+	background-image: url("../img/header/banner.jpg");
 	font-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 header .logo {
