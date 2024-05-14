@@ -18,12 +18,23 @@ main .top h2 {
 }
 
 main .top a {
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 700;
 	text-decoration: none;
+	display: inline-block;
+	transition: transform 0.3s ease;
+
+
 }
-
-
+a:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+main .top a,
+main .top a:active,
+main .top a:visited {
+	color: #505356;
+}
 
 main .bottom {
 	display: flex;
@@ -52,43 +63,55 @@ main .bottom .left .item   {
 	color: #505356;
 	text-decoration: none;
 }
-.box {
-	margin-top: 25px;
-	padding: 13px 15px 15px;
-	background-color: #9cc8fd;
+.boostrank {
+	padding: 16px 16px 16px;
+	background-color: blue;
 	border-radius: 20px;
-	font-size: 20px;
-	font-weight: 700;
-	text-decoration: none;
-	transition: transform 0.3s ease;
-	margin-top: 50px;
-	width: 600px;
-	height: 50px;
-	margin-bottom: 15px;
-	display: flex;
-	flex-direction: column;
-	row-gap: 15px;
-	align-items: center;
+	color: white;
+	font-size: 35px;
+	margin: 0 10px;
+	text-align:center;
+	
+}
+
+.boostwin {
+	padding: 16px 16px 16px;
+	background-color: blue;
+	border-radius: 20px;
+	color: white;
+	font-size: 35px;
+	margin: 0 10px;
+	text-align: center;
 
 }
-.content {
-	margin-top: 25px;
-	padding: 13px 15px 15px;
-	background-color: #9cc8fd;
-	border-radius: 20px;
-	font-size: 20px;
-	font-weight: 700;
-	text-decoration: none;
-	transition: transform 0.3s ease;
-	margin-top: 50px;
-	width: 600px;
-	height: 350px;
-	margin-bottom: 15px;
-	display: flex;
-	flex-direction: column;
-	row-gap: 15px;
-	align-items: center;
 
+.calibration {
+	padding: 16px 16px 16px;
+	background-color: blue;
+	border-radius: 20px;
+	color: white;
+	font-size: 35px;
+	margin: 0 10px;
+	text-align: center;
+	
+}
+
+.coach {
+	padding: 16px 16px 16px;
+	background-color: blue;
+	border-radius: 20px;
+	color: white;
+	font-size: 35px;
+	margin: 0 10px;
+	text-align:center;
+	
+}
+
+.link-container {
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+	flex: 1;
 }
 
 @media screen and (max-width: 768px) {

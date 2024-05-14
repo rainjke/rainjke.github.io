@@ -1,8 +1,30 @@
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+	background-image: url('../img/global/art2.jpg');
+	filter: blur(3px);
+	background-size: cover;
+	background-attachment: fixed;
+}
+body {
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
 main {
 	padding: 25px;
 }
 
-main .top {
+main .top {	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -15,43 +37,64 @@ main .top h2 {
 
 	color: #1e4086;
 	font-size: 30px;
+	
 }
+
 
 main .top a {
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 700;
 	text-decoration: none;
-}
+	display: inline-block;
+	transition: transform 0.3s ease;
 
+}
+a:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
 main .top a,
 main .top a:active,
 main .top a:visited {
-	color: #505356;
+	color: beige;
 }
 
 main .info {
 	margin-top: 50px;
-	padding: 0 300px;
+
 }
 
 main .info h3 {
+	padding: 0 30px;
 	padding-bottom: 10px;
-	color: #7097cb;
-	font-size: 40px;
+	font-size: 80px;
+	color:	beige;
+
+
 }
 
 main .info h3:not(:first-child) {
 	padding-top: 10px;
 }
-main .info h4 {
-	padding-bottom: 15px;
-	color: #7097cb;
-	font-size: 25px;
+main .info h4  {
+	padding-bottom: 25px;
+	color: #e0e2e4;
+	font-size: 38px;
+	margin-top: 30px;
+	padding: 0 50px;
+	padding: 10px 30px 16px;
+	background-color: rgb(163, 252, 255);
+	border-radius: 50px;
+	display: inline-block;
+	color: #000000;
+
 }
+
 
 main .info h4:not(:first-child) {
 	padding-top: 10px;
 }
+
 main .info p,
 main .info ul {
 	color: #505356;
@@ -59,7 +102,19 @@ main .info ul {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.text {
+	color: beige;
+	font-size: 35px;
+	font-weight: 700;
+	padding: 30px 0px 25px;
 
+}
+.number {
+	color: lightcoral;
+	font-size: 40px;
+
+
+}
 @media screen and (max-width: 768px) {
 	main .info {
 		margin-top: 50px;
