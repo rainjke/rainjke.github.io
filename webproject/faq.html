@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FAQ</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/faq.css" />
+		<script src="js/faq.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			<a href="index.html"><div class="logo"></div></a>
+			<nav>
+				<ul>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="services.html">Услуги</a></li>
+					<li><a href="order.html">Как заказать</a></li>
+					<li><a href="cost.html">Расчет стоимости</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="top">
+				<h2>Часто задаваемые вопросы</h2>
+				<a href="index.html">На главную страницу</a>
+			</div>
+			<button class="expand-button" aria-controls="content1" onclick="expandContent('content1', this)">Нажми меня 1</button>
+			<div id="content1" class="content" style="display: none;">
+				Содержимое кнопки 1, которое появится при раскрытии
+			</div>
+			
+			<button class="expand-button" aria-controls="content2" onclick="expandContent('content2', this)">Нажми меня 2</button>
+			<div id="content2" class="content" style="display: none;">
+				Содержимое кнопки 2, которое появится при раскрытии
+			</div>
+			
+			<button class="expand-button" aria-controls="content3" onclick="expandContent('content3', this)">Нажми меня 3</button>
+			<div id="content3" class="content" style="display: none;">
+				Содержимое кнопки 3, которое появится при раскрытии
+			</div>
+			
+			<button class="expand-button" aria-controls="content4" onclick="expandContent('content4', this)">Нажми меня 4</button>
+			<div id="content4" class="content" style="display: none;">
+				Содержимое кнопки 4, которое появится при раскрытии
+			</div>
+			
+			<button class="expand-button" aria-controls="content5" onclick="expandContent('content5', this)">Нажми меня 5</button>
+			<div id="content5" class="content" style="display: none;">
+				Содержимое кнопки 5, которое появится при раскрытии
+			</div>
+		</main>
+	</body>
+</html>
