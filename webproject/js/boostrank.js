@@ -1,12 +1,15 @@
 let currentRank = '';
 let desiredRank = '';
 
+
+function setRank(rank) {
   if (currentRank === '') {
     currentRank = rank;
-    document.getElementById('currentRankSelection').innerHTML = <img src="${rank}.png" class="rank-image">;
+
+    document.getElementById('currentRankSelection').innerHTML = `<img src="${rank}.png" class="rank-image">`;
   } else {
     desiredRank = rank;
-    document.getElementById('desiredRankSelection').innerHTML = <img src="${rank}.png" class="rank-image">;
+    document.getElementById('desiredRankSelection').innerHTML = `<img src="${rank}.png" class="rank-image">`;
   }
 }
 
@@ -26,9 +29,11 @@ function calculateBoost() {
     ascendant: 15,
     immortal: 25,
     radiant: 50
-
   };
 
   const boostAmount = Math.abs(rankPrices[desiredRank] - rankPrices[currentRank]);
-  document.getElementById('boostResult').textContent = Boost amount: $${boostAmount};
+  document.getElementById('boostResult').textContent = `Boost amount: ${boostAmount}`;
 }
+
+
+    

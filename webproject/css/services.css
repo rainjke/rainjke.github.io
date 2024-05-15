@@ -10,7 +10,7 @@ body::before {
     height: 100%;
     z-index: -1;
 	background-image: url('../img/global/art4.png');
-	filter: blur(3px);
+	filter: blur(1.5px);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -53,7 +53,7 @@ a:hover {
 main .top a,
 main .top a:active,
 main .top a:visited {
-	color: #505356;
+	color: beige;
 }
 
 main .bottom {

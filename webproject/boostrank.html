@@ -42,6 +42,8 @@
 					  <img src="img/ranks/ascendant.png" class="rank-image" id="ascendant" onclick="selectRank('ascendant')" title="Ascendant">
 					  <img src="img/ranks/immortal.png" class="rank-image" id="immortal" onclick="selectRank('immortal')" title="Immortal">
 					</div>
+					<div id="rank-text"></div>
+					
 					<p class="rr-text">Текущее RR</p>
 						<div class="form-select-wrapper">
 						<select class="form-select" id="current-lp" name="val-currentLP" aria-label="Select Current RR">
@@ -70,6 +72,7 @@
 						<img src="img/ranks/immortal.png" class="rank-image" id="immortal" onclick="selectRank('immortal')" title="Immortal">
 						<img src="img/ranks/radiant.png" class="rank-image" id="radiant" onclick="selectRank('radiant')" title="Radiant">
 						</div>
+						<div id="rank-text"></div>
 					</div>
 			</div>	
 		</section>
@@ -78,6 +81,8 @@
 				<div class="order">
 					<label for="finalorder"><span class='myorder'>Мой заказ</span></label>
 					<div class="desired-current">
+						<div id="rank-text"></div>
+	
 						<div class="current-image">
 						<img id="current-image" src="">
 						<p id="current"></p>
@@ -85,7 +90,7 @@
 						<div class="desired-image">
 						<img id="desired-image" src="">
 						<p id='desired'></p>
-					</div>
+						</div>
 						<button onclick="calculateBoost()" class="calculate">Calculate Boost</button>
 						<p id="boostResult"></p>
 					</div>

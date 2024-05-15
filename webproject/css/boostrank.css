@@ -10,7 +10,7 @@ body::before {
     height: 100%;
     z-index: -1;
 	background-image: url('../img/global/art4.png');
-	filter: blur(3px);
+	filter: blur(4px);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -269,6 +269,15 @@ aside {
 	font-size: 20px;
 	padding-top: 20px;
 }
+.fade-in {
+	animation: fadeInAnimation 0.5s;
+	}
+	
+@keyframes fadeInAnimation {
+	from { opacity: 0; }
+	to { opacity: 1; }
+	}
+
 @media screen and (max-width: 768px) {
 	main .info {
 		margin-top: 50px;
