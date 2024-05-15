@@ -57,17 +57,7 @@ main .top a:visited {
 }
 
 
-main .info {
-	margin-top: 50px;
-	padding: 0 300px;
-	border: 3px solid rgb(134, 128, 128);
-    padding: 20px;
-	width: 700px;
-	text-align: center;
-	border-radius: 10px;
-	height: 365px;
-	border-color: beige;
-}
+
 
 main .info h3 {
 	padding-bottom: 15px;
@@ -86,49 +76,199 @@ main .info ul {
 	padding-bottom: 10px;
 }
 .rank-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
     cursor: pointer;
 	border: 2px solid;
 	border-color: beige;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 5px;
+	background-color: rgb(201, 201, 201);
+	position: relative;
+	transition: transform 0.2s ease-in-out;
 }
-label {
+
+.currentrank {
 	display: inline-block;
-	margin: 25px;
+	margin-left: 150px;
+	margin-top: 30px;
 	padding: 5px 10px 5px;
 	border-radius: 10px;
 	background-color: blue;
 	color: white;
 	font-size: 30px;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
+
 }
-.currentRankSelection {
+.rank-image#iron:hover {
+		transform: scale(1.05);
+		background: rgba(0,0,0,0);
+		color: gray;
+		box-shadow: inset 0 0 0 3px gray;
+}
+.rank-image#silver:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: silver;
+	box-shadow: inset 0 0 0 3px silver;
+}
+.rank-image#bronze:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: rgb(59, 30, 6);
+	box-shadow: inset 0 0 0 3px rgb(59, 30, 6);
+}
+.rank-image#gold:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: goldenrod;
+	box-shadow: inset 0 0 0 3px goldenrod;
+}
+.rank-image#platinum:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: #3a7999;
+	box-shadow: inset 0 0 0 3px #3a7999;
+}
+.rank-image#diamond:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: palevioletred;
+	box-shadow: inset 0 0 0 3px plum;
+}
+.rank-image#ascendant:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: green;
+	box-shadow: inset 0 0 0 3px green;
+}
+.rank-image#immortal:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: red;
+	box-shadow: inset 0 0 0 3px red;
+}.rank-image#radiant:hover {
+	transform: scale(1.05);
+	background: rgba(0,0,0,0);
+	color: yellow;
+	box-shadow: inset 0 0 0 3px rgb(235, 235, 20);
+}
+
+.desiredrank{
+	display: inline-block;
+	margin-left: 150px;
+	margin-top: 50px;
+	padding: 5px 10px 5px;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 30px;
+	margin-bottom: 100px;
+}
+.container1 {
 	margin-top: 50px;
 	padding: 0 300px;
 	border: 3px solid rgb(134, 128, 128);
     padding: 20px;
-	width: 700px;
+	width: 800px;
 	text-align: center;
 	border-radius: 10px;
-	height: 365px;
+	height: 500px;
+	margin-left: 150px;	
 	border-color: beige;
+	background-color: whitesmoke;
+	
 }
-.desiredRankSelection {
+.container2 {
 	margin-top: 50px;
 	padding: 0 300px;
 	border: 3px solid rgb(134, 128, 128);
     padding: 20px;
-	width: 700px;
+	width: 800px;
 	text-align: center;
 	border-radius: 10px;
 	height: 365px;
+	margin-left: 150px;
 	border-color: beige;
+	background-color: whitesmoke;
+	
 }
+.container3 {
+	margin-top: 50px;
+	padding: 0 300px;
+	border: 3px solid rgb(134, 128, 128);
+    padding: 20px;
+	width: 800px;
+	text-align: center;
+	border-radius: 10px;
+	height: 600px;
+	margin-left: 150px;
+	border-color: beige;
+	background-color: whitesmoke;
+	
+}
+section {
+	float:left;
+}
+aside {
+	float:right;
+	margin-right: 300px;
+	margin-top: 100px;
+}
+.myorder {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 5px 10px 5px;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 30px;
+	margin-bottom: 100px;
 
+}
+.calculate {
+	display: inline-block;
+	margin-top: 200px;
+	padding: 10px 10px 10px;
+	border-radius: 5px;
+	background-color: gray;
+	color: white;
+	font-size: 20px;
+	margin-bottom: 100px;
+	text-align: center;
 
+}
+.form-select {
+	border: 3px solid gray;
+	border-color: gray;
+	background-color: gray;
+	background-clip: padding-box;
+	display: block;
+    width: 100%;
+    padding: .6rem 2.25rem .6rem 1rem;
+    -moz-padding-start: calc(1rem - 3px);
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #090a0c;
+    background-color: #fff;
+    background-image: url('../img/global/down.svg');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 8px 8px;
+    border: 1px solid rgba(8,60,130,.06);
+    border-radius: .4rem;
+    box-shadow: 0 0 1.25rem rgba(30,34,40,.04);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+.rr-text {
+	font-size: 20px;
+	padding-top: 20px;
+}
 @media screen and (max-width: 768px) {
 	main .info {
 		margin-top: 50px;

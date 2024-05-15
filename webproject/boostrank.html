@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Буст ранга</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="css/global.css" />
 		<link rel="stylesheet" href="css/boostrank.css" />
 		<script src="js/boostrank.js"></script>
@@ -27,34 +28,70 @@
 				<h2>Буст ранга</h2>
 				<a href="services.html">Назад</a>
 			</div>
+			<section>
 			<div class="info">
-					<label for="currentRank">Выберите текущий ранг:</label>
+					<div class="container1">
+					<label for="currentRank"><span class='currentrank'>Выберите текущий ранг:</span></label>
 					<div id="currentRankSelection">
-					  <img src="img/ranks/iron.png" class="rank-image" onclick="selectRank('iron')">
-					  <img src="img/ranks/bronze.png" class="rank-image" onclick="selectRank('bronze')">
-					  <img src="img/ranks/silver.png" class="rank-image" onclick="selectRank('silver')">
-					  <img src="img/ranks/gold.png" class="rank-image" onclick="selectRank('gold')">
-					  <img src="img/ranks/platinum.png" class="rank-image" onclick="selectRank('platinum')">
-					  <img src="img/ranks/diamond.png" class="rank-image" onclick="selectRank('diamond')">
-					  <img src="img/ranks/ascendant.png" class="rank-image" onclick="selectRank('ascendant')">
-					  <img src="img/ranks/immortal.png" class="rank-image" onclick="selectRank('immortal')">
+					  <img src="img/ranks/iron.png" class="rank-image" id="iron" onclick="selectRank('iron')" title="Iron">
+					  <img src="img/ranks/bronze.png" class="rank-image" id="bronze" onclick="selectRank('bronze')" title="Bronze">
+					  <img src="img/ranks/silver.png" class="rank-image" id="silver" onclick="selectRank('silver')" title="Silver">
+					  <img src="img/ranks/gold.png" class="rank-image" id="gold" onclick="selectRank('gold')" title="Gold">
+					  <img src="img/ranks/platinum.png" class="rank-image" id="platinum" onclick="selectRank('platinum')" title="Platinum">
+					  <img src="img/ranks/diamond.png" class="rank-image" id="diamond" onclick="selectRank('diamond')" title="Diamond">
+					  <img src="img/ranks/ascendant.png" class="rank-image" id="ascendant" onclick="selectRank('ascendant')" title="Ascendant">
+					  <img src="img/ranks/immortal.png" class="rank-image" id="immortal" onclick="selectRank('immortal')" title="Immortal">
 					</div>
-					<label for="desiredRank">Выберите желаемый ранг:</label>
-					<div id="desiredRankSelection">
-						<img src="img/ranks/iron.png" class="rank-image" onclick="selectRank('iron')">
-						<img src="img/ranks/bronze.png" class="rank-image" onclick="selectRank('bronze')">
-						<img src="img/ranks/silver.png" class="rank-image" onclick="selectRank('silver')">
-						<img src="img/ranks/gold.png" class="rank-image" onclick="selectRank('gold')">
-						<img src="img/ranks/platinum.png" class="rank-image" onclick="selectRank('platinum')">
-						<img src="img/ranks/diamond.png" class="rank-image" onclick="selectRank('diamond')">
-						<img src="img/ranks/ascendant.png" class="rank-image" onclick="selectRank('ascendant')">
-						<img src="img/ranks/immortal.png" class="rank-image" onclick="selectRank('immortal')">
-						<img src="img/ranks/radiant.png" class="rank-image" onclick="selectRank('radiant')">
+					<p class="rr-text">Текущее RR</p>
+						<div class="form-select-wrapper">
+						<select class="form-select" id="current-lp" name="val-currentLP" aria-label="Select Current RR">
+						<option value="0-20">0-20 RR</option>
+						<option value="21-40">21-40 RR</option>
+						<option value="41-60">41-60 RR</option>
+ 						<option value="61-80">61-80 RR</option>
+						<option value="81-100">81-100 RR</option>
+						</select>
+						</div>
+						</div>
+					<div class="currentimage">
+						<img id="current-image" src="">
+					</div>	
+				</div>			
+					<div class="container2">
+					<label for="desiredRank"><span class='desiredrank'>Выберите желаемый ранг:</span></label>
+						<div id="desiredRankSelection">
+						<img src="img/ranks/iron.png" class="rank-image" id="iron" onclick="selectRank('iron')" title="Iron">
+						<img src="img/ranks/bronze.png" class="rank-image" id="bronze" onclick="selectRank('bronze')" title="Bronze">
+						<img src="img/ranks/silver.png" class="rank-image" id="silver" onclick="selectRank('silver')" title="Silver">
+						<img src="img/ranks/gold.png" class="rank-image" id="gold" onclick="selectRank('gold')" title="Gold">
+						<img src="img/ranks/platinum.png" class="rank-image" id="platinum" onclick="selectRank('platinum')" title="Platinum">
+						<img src="img/ranks/diamond.png" class="rank-image" id="diamond" onclick="selectRank('diamond')" title="Diamond">
+						<img src="img/ranks/ascendant.png" class="rank-image" id="ascendant" onclick="selectRank('ascendant')" title="Ascendant">
+						<img src="img/ranks/immortal.png" class="rank-image" id="immortal" onclick="selectRank('immortal')" title="Immortal">
+						<img src="img/ranks/radiant.png" class="rank-image" id="radiant" onclick="selectRank('radiant')" title="Radiant">
+						</div>
 					</div>
 			</div>	
-						<button onclick="calculateBoost()">Calculate Boost</button>
+		</section>
+		<aside>
+			<div class="container3">
+				<div class="order">
+					<label for="finalorder"><span class='myorder'>Мой заказ</span></label>
+					<div class="desired-current">
+						<div class="current-image">
+						<img id="current-image" src="">
+						<p id="current"></p>
+						</div>
+						<div class="desired-image">
+						<img id="desired-image" src="">
+						<p id='desired'></p>
+					</div>
+						<button onclick="calculateBoost()" class="calculate">Calculate Boost</button>
 						<p id="boostResult"></p>
-
+					</div>
+				</div>
+			</div>
+		</aside>				
 		</main>
 	</body>
 </html>
