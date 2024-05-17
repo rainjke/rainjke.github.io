@@ -10,7 +10,7 @@ body::before {
     height: 100%;
     z-index: -1;
 	background-image: url('../img/global/art18.jpeg');
-	filter: blur(4px);
+	filter: blur(5px);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -55,38 +55,203 @@ main .top a:visited {
 	color: beige;
 }
 
-
-main .info {
-	margin-top: 50px;
-	padding: 0 300px;
+.arrow {
+    position: relative;
+	cursor: pointer;
+    width: 80px;
+    height: 50px;
+    margin: 20px;
 }
 
-main .info h3 {
-	padding-bottom: 15px;
-	color: #7097cb;
+.item {
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+.next {
+	float: right;
+
+}
+.prev {
+	float: left;
+}
+button.next {
+    cursor: pointer;
+    margin: 20px;
+	position: relative;
+    top: 20px;
+    width: 90px;
+    height: 10px;
+    background-color: blue;
+    left:0;
+    display: block;
+}
+
+button.next::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -13px;
+    right: -8px;
+    background-color: blue;
+    transform: rotate(45deg);
+}
+button.next::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 9px;
+    right: -8px;
+    background-color: blue;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+button.next:hover {
+    animation: button 1s linear infinite;
+}
+@keyframes button{
+    0% {
+        left:0;
+    }
+    50% {
+        left:10px;
+    }
+    100% {
+        left:0;
+    }
+}
+button.prev {
+    cursor: pointer;
+    position: relative;
+    margin: 20px;
+    top: 20px;
+    width: 90px;
+    height: 10px;
+    background-color: blue;
+ 
+    left:0;
+    display: block;
+}
+button.prev::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 9px;
+    right: 56px;
+    background-color: blue;
+    transform: rotate(45deg);
+}
+button.prev::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -13px;
+    right: 56px;
+    background-color: blue;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+button.prev:hover {
+    animation: button 1s linear infinite;
+}
+@keyframes button {
+    0% {
+        left:0;
+    }
+    50% {
+        left:10px;
+    }
+    100% {
+        left:0;
+    }
+}
+
+
+.boostprogress{
 	font-size: 25px;
+	margin-left: 450px;
+	margin-top: 400px;
+	min-width: 600px;
+	position: fixed;
+	color: midnightblue;
+}
+.name {
+	font-size: 25px;
+	color: blue;
+	margin-top: 360px;
+	margin-left: 450px;
+	min-width: 600px;
+	position: fixed;
+}
+.comment {
+	font-size: 40px;
+	text-align: left;
+	max-width: 400px;
+	margin-top: 100px;
+	position: fixed;
+	margin-left: 10px;
 }
 
-main .info img {
+main .blockquote-detail img {
 	display: block;
-	width: 400px;
-	margin: 0 auto;
+	width: 200px;
+	margin-top: 100px;
+	margin-left: 650px;
 	padding: 15px 0;
 	border-radius: 50px;
+	position: fixed;
+	
+}
+.our-reviews {
+	color: Beige;
+	font-size: 125px;
+	margin-left: 100px;
+	margin-top: 40px;
+	
+}
+.reviews-about {
+	color: lightcyan;
+	font-size: 50px;
+	text-align: left;
+	margin-left: 100px;
+	margin-top: 75px;
+	max-width: 1000px;
 }
 
-main .info p,
-main .info ul {
-	color: #505356;
-	font-weight: 700;
-	padding-bottom: 10px;
+
+.card-body {
+	margin-top: -650px;
+	padding: 0 300px;
+	border: 3px solid rgb(134, 128, 128);
+    padding: 20px;
+	width: 1000px;
+	text-align: center;
+	border-radius: 25px;
+	height: 600px;
+	border-color: lightgrey;
+	background-color: whitesmoke;
+	margin-left: 1250px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: fixed;
+}
+.arrow-1 {
+	margin-left: 1550px;
+	margin-top: -150px;
+	position: fixed;
 }
 
-main .info a,
-main .info a:visited,
-main .info a:active {
-	color: #7097cb;
-	text-decoration: none;
+.arrow-2 {
+	margin-top: -150px;
+	margin-left: 1750px;
+	position: fixed;
 }
 
 @media screen and (max-width: 768px) {

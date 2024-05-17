@@ -7,3 +7,4 @@ function expandContent(contentId, button) {
       content.style.top = button.offsetHeight + "px";
   }
 }
+

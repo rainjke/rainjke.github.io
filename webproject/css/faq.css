@@ -56,23 +56,21 @@ main .top a:visited {
 }
 
 button {
-	margin-top: 25px;
-	padding: 13px 15px 15px;
-	background-color: #9cc8fd;
+	margin-top: 125px;
+	padding: 12px 20px 20px;
 	border-radius: 20px;
 	font-size: 20px;
 	font-weight: 700;
 	text-decoration: none;
 	transition: transform 0.3s ease;
-	margin-top: 50px;
-	width: 600px;
+	
+	width: 700px;
 	height: 50px;
-	margin-bottom: 15px;
+
 	display: flex;
 	flex-direction: column;
 	row-gap: 15px;
 	align-items: center;
-
 }
 .content {
     display: none;
@@ -86,6 +84,10 @@ button {
 .expand-button {
     position: relative;
 	animation: slideIn 1s forwards;
+	background-image: url('../img/global/down.svg');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 8px 8px;				
 }
 @keyframes slideIn {
 	from {
@@ -102,10 +104,103 @@ button {
 .expand-button:hover + .content {
     display: block;
 }
-
-
-
+.container {
+	position: fixed;
+}
+.topp {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+  }
   
+.bottom {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+  }
+  .container-1 {
+	margin-right: 30px;
+	
+
+ 	 overflow: hidden;
+	
+  }
+  .container-2 {
+	margin-right: 30px;
+
+	
+  overflow: hidden;
+  }
+  .container-3 {
+	margin-right: 30px;
+
+
+  overflow: hidden;
+  }
+  .container-4 {
+	margin-right: 30px;
+
+	
+  overflow: hidden;
+  }
+  .container-5 {
+	margin-right: 30px;
+
+
+  overflow: hidden;
+	
+  }
+p {
+	margin-left: 20px;
+	margin-top: 15px;
+	font-size: 25px;
+	margin-right: 10px;
+}
+.content1 {
+	color: blue;
+
+	max-width: 700px;
+	height: 300px;
+	border-radius: 10px;
+	background-color: lightcyan;
+	text-align: left;
+}
+.content2 {
+	color: blue;
+
+	max-width: 700px;
+	height: 300px;
+	border-radius: 10px;
+	background-color: lightcyan;
+	text-align: center;
+
+}
+.content3 {
+	color: blue;
+
+	max-width: 700px;
+	height: 300px;
+	border-radius: 10px;
+	background-color: whitesmoke;
+}
+.content4 {
+	color: blue;
+
+	max-width: 700px;
+	height: 300px;
+	border-radius: 10px;
+	background-color: white;
+}
+.content5 {
+	color: blue;
+	max-width: 700px;
+	height: 300px;
+	border-radius: 10px;
+	background-color: lightcyan;
+}
+
 @media screen and (max-width: 768px) {
 	main .top {
 		flex-direction: column;

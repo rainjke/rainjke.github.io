@@ -84,47 +84,56 @@ main .bottom .left .item   {
 	text-decoration: none;
 }
 .boostrank {
-	padding: 16px 16px 16px;
-	background-color: blue;
+	padding: 25px 25px 25px;
+	background-color: beige;
 	border-radius: 20px;
-	color: white;
-	font-size: 35px;
+	color: blue;
+	font-size: 50px;
 	margin: 0 10px;
 	text-align:center;
-	
+	text-decoration:none;
+
+
 }
+
 
 .boostwin {
-	padding: 16px 16px 16px;
-	background-color: blue;
+	padding: 25px 25px 25px;
+	background-color: beige;
 	border-radius: 20px;
-	color: white;
-	font-size: 35px;
+	color: blue;
+	font-size: 50px;
 	margin: 0 10px;
 	text-align: center;
+	text-decoration:none;
+
 
 }
 
+
 .calibration {
-	padding: 16px 16px 16px;
-	background-color: blue;
+	padding: 25px 25px 25px;
+	background-color: beige;
 	border-radius: 20px;
-	color: white;
-	font-size: 35px;
+	color: blue;
+	font-size: 50px;
 	margin: 0 10px;
 	text-align: center;
-	
+	text-decoration:none;
+
+
 }
 
 .coach {
-	padding: 16px 16px 16px;
-	background-color: blue;
+	padding: 25px 25px 25px;
+	background-color: beige;
 	border-radius: 20px;
-	color: white;
-	font-size: 35px;
-	margin: 0 10px;
+	color: blue;
+	font-size: 50px;
+	margin: 0 50px;
 	text-align:center;
-	
+	text-decoration:none;
+
 }
 
 .link-container {
@@ -133,6 +142,8 @@ main .bottom .left .item   {
     align-items: flex-start;
 	flex: 1;
 }
+
+
 
 @media screen and (max-width: 768px) {
 	main .bottom {
