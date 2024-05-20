@@ -1,19 +1,21 @@
 main {
 	padding: 25px;
 }
+
 body::before {
 	content: '';
 	position: fixed;
 	top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 	background-image: url('../img/global/art8.jpg');
 	filter: blur(2.5px);
 	background-size: cover;
 	background-attachment: fixed;
 }
+
 body {
 	background-size: cover;
 	background-attachment: fixed;
@@ -22,6 +24,7 @@ body {
 	background-position: center center;
 	background-size: cover;
 }
+
 main .top {
 	display: flex;
 	justify-content: space-between;
@@ -32,7 +35,6 @@ main .top h2 {
 	padding: 9px 12px 12px;
 	background-color: white;
 	border-radius: 25px;
-
 	color: #1e4086;
 	font-size: 30px;
 }
@@ -43,52 +45,49 @@ main .top a {
 	text-decoration: none;
 	display: inline-block;
 	transition: transform 0.3s ease;
-
+	color: beige;
 }
+
 a:hover {
 	transform: scale(1.1);
 	transition: transform 0.3s ease;
 }
-main .top a,
-main .top a:active,
-main .top a:visited {
-	color: beige;
-}
 
 button {
-	margin-top: 125px;
-	padding: 12px 20px 20px;
+	margin-top: 25px;
+	padding: 12px 20px;
 	border-radius: 20px;
 	font-size: 20px;
 	font-weight: 700;
 	text-decoration: none;
 	transition: transform 0.3s ease;
-	
-	width: 700px;
-	height: 50px;
-
+	width: 100%;
 	display: flex;
-	flex-direction: column;
-	row-gap: 15px;
 	align-items: center;
+	background-color: white;
+	color: #1e4086;
+	border: none;
+	cursor: pointer;
 }
+
 .content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    transition: max-height 0.5s ease;
+	display: none;
+	background-color: #f9f9f9;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	margin-top: 10px;
 }
 
 .expand-button {
-    position: relative;
+	position: relative;
 	animation: slideIn 1s forwards;
 	background-image: url('../img/global/down.svg');
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 8px 8px;				
+	background-repeat: no-repeat;
+	background-position: right 1rem center;
+	background-size: 8px 8px;
 }
+
 @keyframes slideIn {
 	from {
 		transform: translateY(100%);
@@ -102,103 +101,23 @@ button {
 
 .expand-button:focus + .content,
 .expand-button:hover + .content {
-    display: block;
+	display: block;
 }
+
 .container {
-	position: fixed;
+	flex: 1;
+	margin: 10px;
 }
-.topp {
+
+.topp, .bottom {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
-  }
-  
-.bottom {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-  }
-  .container-1 {
-	margin-right: 30px;
-	
+}
 
- 	 overflow: hidden;
-	
-  }
-  .container-2 {
-	margin-right: 30px;
-
-	
-  overflow: hidden;
-  }
-  .container-3 {
-	margin-right: 30px;
-
-
-  overflow: hidden;
-  }
-  .container-4 {
-	margin-right: 30px;
-
-	
-  overflow: hidden;
-  }
-  .container-5 {
-	margin-right: 30px;
-
-
-  overflow: hidden;
-	
-  }
 p {
-	margin-left: 20px;
-	margin-top: 15px;
-	font-size: 25px;
-	margin-right: 10px;
-}
-.content1 {
-	color: blue;
-
-	max-width: 700px;
-	height: 300px;
-	border-radius: 10px;
-	background-color: white;
-	text-align: left;
-}
-.content2 {
-	color: blue;
-
-	max-width: 700px;
-	height: 300px;
-	border-radius: 10px;
-	background-color: white;
-	text-align: center;
-
-}
-.content3 {
-	color: blue;
-
-	max-width: 700px;
-	height: 300px;
-	border-radius: 10px;
-	background-color: white;
-}
-.content4 {
-	color: blue;
-
-	max-width: 700px;
-	height: 300px;
-	border-radius: 10px;
-	background-color: white;
-}
-.content5 {
-	color: blue;
-	max-width: 700px;
-	height: 300px;
-	border-radius: 10px;
-	background-color: white;
+	margin: 15px 20px;
+	font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
@@ -207,4 +126,7 @@ p {
 		row-gap: 15px;
 	}
 
+	button {
+		width: 90%;
+	}
 }
