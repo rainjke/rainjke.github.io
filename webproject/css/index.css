@@ -1,8 +1,10 @@
+
 body {
 	background-color: rgb(240, 234, 234);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	overflow-x: hidden;
 }
 
 main {
@@ -27,8 +29,8 @@ main h1 .gray {
 	margin-top: 25px;
 	padding: 5px 10px 10px;
 	border-radius: 20px;
-	background-color: #505356;
-	color: white;
+	background-color: blue;
+	color: whitesmoke;
 	font-size: 50px;
 	
 }
@@ -53,6 +55,20 @@ main .services {
 	text-decoration: none;
 	transition: transform 0.3s ease;
 }
+main .cost {
+	display: inline-block;
+	margin-top: 50px;
+	padding: 13px 15px 15px;
+	background-color: #6d94c3;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 10px;
+	text-decoration: none;
+	transition: transform 0.3s ease;
+
+}
+
 
 main .services,
 main .services:visited,
@@ -64,14 +80,26 @@ main .services:hover {
 	transform: scale(1.1);
 	transition: transform 0.3s ease;
 }
+main .cost,
+main .cost:visited,
+main .cost:active {
+	color: white;
+}
+
+main .cost:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
 
 
 .right-image {
 	float: right;
-	margin-left: 20px;
+	margin-left: 3vw;
 	margin-top: -10%;
 	position: relative;
 	transition: transform 0.3s ease;
+	overflow-x: hidden;
 }
 .right-image:hover {
 	transform: scale(1.08);

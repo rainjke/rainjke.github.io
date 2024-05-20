@@ -178,10 +178,11 @@ main .info ul {
 	margin-left: 150px;	
 	border-color: beige;
 	background-color: whitesmoke;
+	position: fixed;
 	
 }
 .container2 {
-	margin-top: 50px;
+	margin-top: 600px;
 	padding: 0 300px;
 	border: 3px solid rgb(134, 128, 128);
     padding: 20px;
@@ -192,10 +193,11 @@ main .info ul {
 	margin-left: 150px;
 	border-color: beige;
 	background-color: whitesmoke;
+	position: fixed;
 	
 }
 .container3 {
-	margin-top: 50px;
+	margin-top: 150px;
 	padding: 0 300px;
 	border: 3px solid rgb(134, 128, 128);
     padding: 20px;
@@ -203,19 +205,13 @@ main .info ul {
 	text-align: center;
 	border-radius: 10px;
 	height: 600px;
-	margin-left: 150px;
+	margin-left: 1500px;
 	border-color: beige;
 	background-color: whitesmoke;
-	
+	position: fixed;
 }
-section {
-	float:left;
-}
-aside {
-	float:right;
-	margin-right: 300px;
-	margin-top: 100px;
-}
+
+
 .myorder {
 	display: inline-block;
 	margin-top: 15px;

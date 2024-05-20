@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
-
-	font-family: 'Inter';
-	font-style: bold;
-	src:local(), url('/fonts/Inter-Bold.woff2') format('woff2');
+	
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-variation-settings:
+	  "slnt" 0;
 }
 
 body:not(header) {
@@ -25,6 +30,7 @@ body:not(header) {
 		opacity: 1;
 	}
 }
+
 header {
 	display: flex;
 	align-items: flex-end;
