@@ -10,60 +10,60 @@ body {
 main {
 	display: flex;
 	justify-content: space-between;
-	padding: 60px 50px 20px;
+	padding: 1vw 2vw 0.5vw;
 }
 
 main h1 .blue {
 	color: #1e4086;
-	font-size: 100px;
+	font-size: 4vw;
 }
 
 main h1 .lightblue {
 	color: #7097cb;
-	font-size: 70px;
+	font-size: 3vw;
 	
 }
 
 main h1 .gray {
 	display: inline-block;
-	margin-top: 25px;
+	margin-top: 1vw;
 	padding: 5px 10px 10px;
 	border-radius: 20px;
 	background-color: blue;
 	color: whitesmoke;
-	font-size: 50px;
+	font-size: 2.5vw;
 	
 }
 
 main .text {
-	max-width: 700px;
-	margin-top: 70px;
+	max-width: 30vw;
+	margin-top: 1vw;
 
 	color: #1e4086;
-	font-size: 40px;
+	font-size: 2vw;
 	font-weight: 700;
 }
 
 main .services {
 	display: inline-block;
-	margin-top: 35px;
+	margin-top: 1.5vw;
 	padding: 13px 15px 15px;
 	background-color: #6d94c3;
-	border-radius: 20px;
-	font-size: 30px;
+	border-radius: 1vw;
+	font-size: 1.55vw;
 	font-weight: 700;
 	text-decoration: none;
 	transition: transform 0.3s ease;
 }
 main .cost {
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 1.5vw;
 	padding: 13px 15px 15px;
 	background-color: #6d94c3;
-	border-radius: 20px;
-	font-size: 30px;
+	border-radius: 1vw;
+	font-size: 1.55vw;
 	font-weight: 700;
-	margin-left: 10px;
+	margin-left: 0.5vw;
 	text-decoration: none;
 	transition: transform 0.3s ease;
 
@@ -96,7 +96,8 @@ main .cost:hover {
 .right-image {
 	float: right;
 	margin-left: 3vw;
-	margin-top: -10%;
+	width: 46vw;
+	margin-top: -6%;
 	position: relative;
 	transition: transform 0.3s ease;
 	overflow-x: hidden;

@@ -55,13 +55,7 @@ main .top a:visited {
 	color: beige;
 }
 
-.arrow {
-    position: relative;
-	cursor: pointer;
-    width: 80px;
-    height: 50px;
-    margin: 20px;
-}
+
 
 .item {
     display: none;
@@ -79,35 +73,34 @@ main .top a:visited {
 }
 button.next {
     cursor: pointer;
-    margin: 20px;
 	position: relative;
-    top: 20px;
-    width: 90px;
-    height: 10px;
+
+    width: 4vw;
+    height: 0.5vw;
     background-color: blue;
-    left:0;
-    display: block;
+
+ 
 }
 
 button.next::after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 10px;
-    top: -13px;
-    right: -8px;
+    width: 2vw;
+    height: 0.5vw;
+    top: -0.7vw;
+    right: -0.44vw;
     background-color: blue;
     transform: rotate(45deg);
 }
 button.next::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 10px;
-    top: 9px;
-    right: -8px;
+	width: 2vw;
+    height: 0.5vw;
+    top: 0.4vw;
+    right: -0.44vw;
     background-color: blue;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+
     transform: rotate(-45deg);
 }
 button.next:hover {
@@ -127,34 +120,33 @@ button.next:hover {
 button.prev {
     cursor: pointer;
     position: relative;
-    margin: 20px;
-    top: 20px;
-    width: 90px;
-    height: 10px;
+
+    width: 3.5vw;
+    height: 0.5vw;
     background-color: blue;
  
-    left:0;
+
     display: block;
 }
 button.prev::after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 10px;
-    top: 9px;
-    right: 56px;
+    width: 2vw;
+    height: 0.5vw;
+	top: 0.4vw;
+    right: 2.1vw;
     background-color: blue;
     transform: rotate(45deg);
 }
 button.prev::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 10px;
-    top: -13px;
-    right: 56px;
+    width: 2vw;
+    height: 0.5vw;
+    top: -0.7vw;
+    right: 2.1vw;
     background-color: blue;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+
     transform: rotate(-45deg);
 }
 button.prev:hover {
@@ -174,84 +166,94 @@ button.prev:hover {
 
 
 .boostprogress{
-	font-size: 25px;
-	margin-left: 450px;
-	margin-top: 400px;
-	min-width: 600px;
-	position: fixed;
+	font-size: 1vw;
+
+	margin-top: 0.6vw;
+	margin-left: 22vw;
 	color: midnightblue;
 }
 .name {
-	font-size: 25px;
+	font-size: 1.4vw;
 	color: blue;
-	margin-top: 360px;
-	margin-left: 450px;
-	min-width: 600px;
-	position: fixed;
+	margin-left: 22vw;
+	margin-top: 1vw;
+
+
 }
 .comment {
-	font-size: 40px;
+	font-size: 1.5vw;
+	max-width: 20vw;
 	text-align: left;
-	max-width: 400px;
-	margin-top: 100px;
-	position: fixed;
-	margin-left: 10px;
+	float: left;
+	margin-left: 1.5vw;
+	margin-top: 6vw;
 }
 
 main .blockquote-detail img {
 	display: block;
-	width: 200px;
-	margin-top: 100px;
-	margin-left: 650px;
-	padding: 15px 0;
+	width: 9vw;
+	margin-left: 26.2vw;
+	margin-top: 5vw;
+	
 	border-radius: 50px;
-	position: fixed;
 	
 }
 .our-reviews {
 	color: Beige;
-	font-size: 125px;
-	margin-left: 100px;
-	margin-top: 40px;
-	
+	font-size: 3vw;
+	margin-left: 9.5vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
 }
 .reviews-about {
-	color: lightcyan;
-	font-size: 50px;
+	color: #1e4086;
+	font-size: 1.75vw;
 	text-align: left;
-	margin-left: 100px;
-	margin-top: 75px;
-	max-width: 1000px;
+	max-width: 35vw;
+	margin-left: 1.5vw;
+	background-color: white;
+	border-radius: 2vw;
+	height: 24vw;
+	text-align: center;
+	padding: 1.25vw;
+	flex-basis: 50%
+
+	
+
 }
 
-
+.box {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 1em;
+	flex-wrap: wrap;
+	width: 100%;
+}
 .card-body {
-	margin-top: -650px;
-	padding: 0 300px;
 	border: 3px solid rgb(134, 128, 128);
-    padding: 20px;
-	width: 1000px;
+	width: 40vw;
 	text-align: center;
 	border-radius: 25px;
-	height: 600px;
+	height: 25vw;
 	border-color: lightgrey;
 	background-color: whitesmoke;
-	margin-left: 1250px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	position: fixed;
+	margin-right: 5vw;
+
+	margin-top: 4.6vw;
+	flex-basis: 50%;
+
+
 }
 .arrow-1 {
-	margin-left: 1550px;
-	margin-top: -150px;
-	position: fixed;
-}
+	margin-top: -6.5%;
+	margin-left: 15vw;
 
+}
 .arrow-2 {
-	margin-top: -150px;
-	margin-left: 1750px;
-	position: fixed;
+	margin-top: -12%;
+	margin-right: 15vw;
+
 }
 
 @media screen and (max-width: 768px) {

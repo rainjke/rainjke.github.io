@@ -30,11 +30,11 @@ function calculateBoost() {
   };
 
   const rrRanges = {
-    '0-20': 1,
-    '21-40': 2,
+    '0-20': 5,
+    '21-40': 4,
     '41-60': 3,
-    '61-80': 4,
-    '81-100': 5
+    '61-80': 2,
+    '81-100': 1
   };
 
   const currentRankPrice = rankPrices[currentRank];
