@@ -263,11 +263,13 @@ main .blockquote-detail img {
 	}
 
 	main .info {
-		margin-top: 50px;
+		margin-top: 1.7vw;
 		padding: 0;
 	}
 
 	main .info img {
 		max-width: 85vw;
 	}
+
+
 }

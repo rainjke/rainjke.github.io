@@ -111,8 +111,20 @@ p {
         flex-direction: column;
         row-gap: 15px;
     }
-
+    .container {
+        margin-right: 30vw;
+    }
     button {
-        width: 90%;
+        width: 80vw;
+        margin-right: 50vw;
+        height: 4vw;
+        font-size: 1.8vw;
+    }
+    .content {
+        width: 80vw;
+        height: 13.5vw;
+    }
+    p {
+        font-size: 2vw;
     }
 }
