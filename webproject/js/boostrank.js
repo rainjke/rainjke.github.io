@@ -1,19 +1,9 @@
-let currentRank = '';
-let desiredRank = '';
-
-function selectRank(rank) {
-  if (!currentRank) {
-    currentRank = rank;
-    document.getElementById('currentRankSelection').innerHTML = `<img src="img/ranks/${rank}.png" class="rank-image" title="${rank}">`;
-  } else if (!desiredRank) {
-    desiredRank = rank;
-    document.getElementById('desiredRankSelection').innerHTML = `<img src="img/ranks/${rank}.png" class="rank-image" title="${rank}">`;
-  }
-}
+let currentRank = "";
+let desiredRank = "";
 
 function calculateBoost() {
   if (!currentRank || !desiredRank) {
-    alert('Please select current and desired ranks.');
+    alert("Please select current and desired ranks.");
     return;
   }
 
@@ -26,27 +16,80 @@ function calculateBoost() {
     diamond: 6,
     ascendant: 7,
     immortal: 8,
-    radiant: 9
+    radiant: 9,
   };
 
   const rrRanges = {
-    '0-20': 5,
-    '21-40': 4,
-    '41-60': 3,
-    '61-80': 2,
-    '81-100': 1
+    "0-20": 5,
+    "21-40": 4,
+    "41-60": 3,
+    "61-80": 2,
+    "81-100": 1,
   };
 
   const currentRankPrice = rankPrices[currentRank];
   const desiredRankPrice = rankPrices[desiredRank];
-  const currentRrMultiplier = rrRanges[document.getElementById('current-lp').value];
+  const currentRrMultiplier =
+    rrRanges[document.getElementById("current-lp").value];
 
   if (currentRankPrice >= desiredRankPrice) {
-    alert('Desired rank must be higher than the current rank.');
+    alert("Desired rank must be higher than the current rank.");
     return;
   }
 
-  const boostPrice = (desiredRankPrice - currentRankPrice) * currentRrMultiplier * 10;
+  const boostPrice =
+    (desiredRankPrice - currentRankPrice) * currentRrMultiplier * 10;
 
-  document.getElementById('boostResult').textContent = `Стоимость буста: ${boostPrice} $`;
+  document.getElementById("boostResult").textContent =
+    `Стоимость буста: ${boostPrice} $`;
+}
+
+document.querySelector(".calculate").addEventListener("click", calculateBoost);
+const currentRankButtons = document.querySelectorAll(
+  "#currentRankSelection img",
+);
+
+for (let i = 0; i < currentRankButtons.length; i++) {
+  currentRankButtons[i].addEventListener("click", function () {
+    if (
+      currentRank &&
+      currentRank !== currentRankButtons[i].getAttribute("id")
+    ) {
+      document
+        .querySelector(`#currentRankSelection .rank-image#${currentRank}`)
+        .classList.remove("rank-selected");
+    }
+    currentRank = currentRankButtons[i].getAttribute("id");
+    document.querySelector(".order #current-image").src =
+      currentRankButtons[i].src;
+    document.querySelector(".order #current-image").classList.remove("hidden");
+    document
+      .querySelector(`#currentRankSelection .rank-image#${currentRank}`)
+      .classList.add("rank-selected");
+    document.getElementById("rankArrow").classList.remove("hidden");
+  });
+}
+
+const desiredRankButtons = document.querySelectorAll(
+  "#desiredRankSelection img",
+);
+
+for (let i = 0; i < desiredRankButtons.length; i++) {
+  desiredRankButtons[i].addEventListener("click", function () {
+    if (
+      desiredRank &&
+      desiredRank !== desiredRankButtons[i].getAttribute("id")
+    ) {
+      document
+        .querySelector(`#desiredRankSelection .rank-image#${desiredRank}`)
+        .classList.remove("rank-selected");
+    }
+    desiredRank = desiredRankButtons[i].getAttribute("id");
+    document.getElementById("desired-image").src = desiredRankButtons[i].src;
+    document.getElementById("desired-image").classList.remove("hidden");
+    document
+      .querySelector(`#desiredRankSelection .rank-image#${desiredRank}`)
+      .classList.add("rank-selected");
+    document.getElementById("rankArrow").classList.remove("hidden");
+  });
 }
