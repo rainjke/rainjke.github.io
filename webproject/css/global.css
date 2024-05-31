@@ -1,4 +1,11 @@
+:root  {
+  --hdr-img: url("../img/header/banner.jpg");
+  --logo-img: url("../img/header/logo2.jpg");
+  --form-color: white;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
 
 * {
   margin: 0;
@@ -35,7 +42,7 @@ header {
   align-items: flex-end;
   width: 100%;
   padding: 15px 30px;
-  background-image: url("../img/header/banner.jpg");
+  background-image: var(--bg-img);
   font-size: 20px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -47,7 +54,7 @@ header .logo {
   height: 90px;
   position: relative;
   transition: transform 0.3s ease;
-  background-image: url("../img/header/logo2.jpg");
+  background-image: var(--logo-img);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -72,7 +79,7 @@ nav ul li:not(:last-child) {
 nav ul li a,
 nav ul li a:visited,
 nav ul li a:active {
-  color: white;
+  color: var(--form-color);
   text-decoration: none;
 }
 
@@ -85,7 +92,17 @@ nav ul li a:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-
+[data-theme="dark"] {
+  --hdr-img:  url("../img/header/bannerdark.jpg");
+  --logo-img: url("../img/header/logodark.jpg");
+  --form-color: #e0e0e0;
+}
+header {
+  background-image: var(--hdr-img);
+}
+header .logo {
+  background-image: var(--logo-img);
+}
 @media screen and (max-width: 768px) {
   header {
     padding: 10px 15px;

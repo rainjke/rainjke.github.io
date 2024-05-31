@@ -1,3 +1,11 @@
+:root {
+  --bg-img:  url("../img/global/art4.png");
+  --form-color: #e0e0e0;
+  --pgldn-color: gold;
+  --text-color: beige;
+  --behindtext-color: white;
+  --p-color: #1e4086;
+}
 main {
   padding: 25px;
 }
@@ -9,7 +17,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../img/global/art4.png");
+  background-image: var(--bg-img);
   filter: blur(10px);
   background-size: cover;
   background-attachment: fixed;
@@ -30,7 +38,7 @@ main .top {
 
 main .top h2 {
   padding: 9px 12px 12px;
-  background-color: white;
+  background-color: var(--form-color);
   border-radius: 25px;
 
   color: #1e4086;
@@ -54,13 +62,13 @@ main .text {
 }
 
 main .text p {
-  color: beige;
+  color: var(--text-color);
   font-weight: 700;
   font-size: 30px;
 }
 
 main .text p .lightblue {
-  color: gold;
+  color: var(--pgldn-color);
   font-size: 40px;
 }
 
@@ -77,12 +85,46 @@ main .test .question {
   padding: 8px 11px 11px;
   font-size: 24px;
   font-weight: 700;
-  color: #1e4086;
-  background-color: white;
+  color: var(--p-color);
+  background-color: var(--behindtext-color);
   border-radius: 20px;
   text-align: center;
 }
-
+.theme {
+  margin-left: 48vw;
+  margin-bottom:  1.5vw;
+}
+#theme-selector {
+  background-clip: padding-box;
+  padding: 0 0.3vw  0 0.3vw;
+  width: 8vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  background-image: url("../img/global/down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.6vw 0.6vw;
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#reset-theme {
+  text-align: center;
+  width: 6vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 main .test .answers {
   display: flex;
   justify-content: space-between;
@@ -93,7 +135,17 @@ main .test .answers img {
   width: 230px;
   border-radius: 40px;
 }
-
+[data-theme="dark"] {
+  --bg-img:  url("../img/dark/8.jpg");
+  --form-color: #e0e0e0;
+  --pgldn-color: goldenrod;
+  --text-color: #e0e0e0;
+  --behindtext-color: #1e4086;
+  --p-color: #e0e0e0;
+}
+body {
+  background-image: var(--bg-img)
+}
 @media screen and (max-width: 768px) {
   main .top {
     flex-direction: column;

@@ -6,7 +6,7 @@ const totalCostDisplay = document.getElementById("totalCost");
 const rankImages = document.querySelectorAll(".rank-image");
 let currentRank = "";
 
-// Функция для обновления стоимости в зависимости от ранга
+
 function updateCost(rank) {
   switch (rank) {
     case "iron":
@@ -45,7 +45,7 @@ function updateCost(rank) {
 
 function calculate() {
   document.getElementById("boostResult").textContent =
-    `Boost amount: ${slider.value * costPerGame}`;
+    `Стоимость буста: ${slider.value * costPerGame} $`;
 }
 
 document.querySelector(".calculate").addEventListener("click", calculate);
@@ -79,3 +79,31 @@ slider.oninput = function () {
 
 victoryCostDisplay.textContent = costPerGame;
 totalCostDisplay.textContent = slider.value * costPerGame;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeSelector = document.getElementById('theme-selector');
+  const resetThemeButton = document.getElementById('reset-theme');
+
+  
+  
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      themeSelector.value = savedTheme;
+  }
+
+  
+  themeSelector.addEventListener('change', (event) => {
+      const selectedTheme = event.target.value;
+      document.documentElement.setAttribute('data-theme', selectedTheme);
+      localStorage.setItem('theme', selectedTheme);
+  });
+
+  
+  resetThemeButton.addEventListener('click', () => {
+      localStorage.removeItem('theme');
+      document.documentElement.removeAttribute('data-theme');
+      themeSelector.value = 'light';
+  });
+})

@@ -1,3 +1,10 @@
+:root {
+  --bg-img: url("../img/global/art8.jpg");
+  --form-color: white;
+  --behindtext-color: white;
+  --p-color: #1e4086;
+  --content-color: black;
+}
 main {
   padding: 25px;
 }
@@ -10,7 +17,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../img/global/art8.jpg");
+  background-image: var(--bg-img);
   filter: blur(2.5px);
   background-size: cover;
   background-attachment: fixed;
@@ -24,7 +31,41 @@ body {
   background-position: center center;
   background-size: cover;
 }
-
+.theme {
+  margin-left: 48vw;
+  margin-bottom:  1.5vw;
+}
+#theme-selector {
+  background-clip: padding-box;
+  padding: 0 0.3vw  0 0.3vw;
+  width: 8vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  background-image: url("../img/global/down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.6vw 0.6vw;
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#reset-theme {
+  text-align: center;
+  width: 6vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 main .top {
   display: flex;
   justify-content: space-between;
@@ -33,7 +74,7 @@ main .top {
 
 main .top h2 {
   padding: 9px 12px 12px;
-  background-color: white;
+  background-color: var(--form-color);
   border-radius: 25px;
   color: #1e4086;
   font-size: 30px;
@@ -53,7 +94,7 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
-button {
+.expand-button {
   margin-top: 1.2vw;
   padding: 0.65vw 1.2vw;
   border-radius: 0.8vw;
@@ -64,8 +105,8 @@ button {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: white;
-  color: #1e4086;
+  background-color: var(--behindtext-color);
+  color: var(--p-color);
   border: none;
   cursor: pointer;
   background-image: url("../img/global/down.svg");
@@ -80,11 +121,12 @@ button.active {
 
 .content {
   display: none;
-  background-color: #f9f9f9;
-  padding: 0.5vw;
+  background-color: var(--behindtext-color);
+  padding: 0.1vw;
   border: 1px solid #ddd;
   border-radius: 0.5vw;
   margin-top: 0.5vw;
+  color: var(--content-color);
 }
 
 .container {
@@ -101,11 +143,21 @@ button.active {
 }
 
 p {
-  margin: 0.1vw 0.1vw;
-  font-size: 1vw;
+  margin: 0.01vw 0.01vw;
+  font-size: 1.2vw;
   white-space: pre-wrap;
 }
+[data-theme="dark"] {
+  --bg-img:  url("../img/dark/6.jpg");
+  --behindtext-color: #1e4086;
+  --p-color: #e0e0e0;
+  --form-color: #e0e0e0;
+  --content-color: lightgray;
 
+}
+body {
+  background-image: var(--bg-img)
+}
 @media screen and (max-width: 768px) {
   main .top {
     flex-direction: column;

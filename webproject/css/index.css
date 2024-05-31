@@ -1,5 +1,13 @@
+:root {
+  --bg-clr: rgb(240, 234, 234);
+  --text-blue-clr: #1e4086;
+  --text-lightblue-clr: #7097cb;
+  --text-gray-clr:  whitesmoke;
+  --main-text-clr:  #1e4086;
+  --bg-gray-clr: blue;
+}
 body {
-  background-color: rgb(240, 234, 234);
+  background-color: var(--bg-clr);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -13,12 +21,12 @@ main {
 }
 
 main h1 .blue {
-  color: #1e4086;
+  color: var(--text-blue-clr);
   font-size: 4vw;
 }
 
 main h1 .lightblue {
-  color: #7097cb;
+  color: var(--text-lightblue-clr);
   font-size: 3vw;
 }
 
@@ -27,8 +35,8 @@ main h1 .gray {
   margin-top: 1vw;
   padding: 5px 10px 10px;
   border-radius: 20px;
-  background-color: blue;
-  color: whitesmoke;
+  background-color: var(--bg-gray-clr);
+  color: var(--text-gray-clr);
   font-size: 2.5vw;
 }
 
@@ -36,7 +44,7 @@ main .text {
   max-width: 30vw;
   margin-top: 1vw;
 
-  color: #1e4086;
+  color:var(--main-text-clr);
   font-size: 2vw;
   font-weight: 700;
 }
@@ -85,7 +93,41 @@ main .cost:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-
+.theme {
+  margin-left: 48vw;
+  margin-bottom:  1.5vw;
+}
+#theme-selector {
+  background-clip: padding-box;
+  padding: 0 0.3vw  0 0.3vw;
+  width: 8vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  background-image: url("../img/global/down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.6vw 0.6vw;
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#reset-theme {
+  text-align: center;
+  width: 6vw;
+  height: 1.5vw;
+  font-size: 0.7vw;
+  color: #090a0c;
+  background-color: var(--form-color);
+  border: 1px solid rgba(8, 60, 130, 0.06);
+  border-radius: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .right-image {
   float: right;
   margin-left: 3vw;
@@ -97,6 +139,17 @@ main .cost:hover {
 }
 .right-image:hover {
   transform: scale(1.08);
+}
+[data-theme="dark"] {
+  --bg-img: url("../img/dark/12.jpg");
+  --text-blue-clr: blue;
+  --text-lightblue-clr: #e0e0e0;
+  --text-gray-clr:  #e0e0e0;
+  --main-text-clr:  #e0e0e0;
+  --bg-gray-clr:  #1e4086;
+}
+body {
+  background-image: var(--bg-img)
 }
 
 @media screen and (max-width: 768px) {
