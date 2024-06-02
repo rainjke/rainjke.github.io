@@ -38,3 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
       themeSelector.value = 'light';
   });
 })
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("joke").addEventListener("click", function() {
+      fetch("https://official-joke-api.appspot.com/random_joke")
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then(data => {
+              document.getElementById("setup").innerText = data.setup;
+              document.getElementById("punchline").innerText = data.punchline;
+          })
+          .catch(error => {
+              console.error("Error fetching joke:", error);
+              // Добавим обработку ошибок для пользователя
+              document.getElementById("setup").innerText = "Произошла ошибка при загрузке шутки.";
+              document.getElementById("punchline").innerText = "";
+          });
+  });
+});

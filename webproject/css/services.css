@@ -3,6 +3,8 @@
   --behindtext-color: beige;
   --p-color: blue;
   --form-color: white;
+  --joke-color: #ff7a7a;
+  --joke-backcolor:beige;
 }
 body::before {
   content: "";
@@ -71,41 +73,8 @@ main .bottom {
   flex-wrap: wrap;
   gap: 25px;
 }
-.theme {
-  margin-left: 48vw;
-  margin-bottom:  1.5vw;
-}
-#theme-selector {
-  background-clip: padding-box;
-  padding: 0 0.3vw  0 0.3vw;
-  width: 8vw;
-  height: 1.5vw;
-  font-size: 0.7vw;
-  color: #090a0c;
-  background-color: var(--form-color);
-  background-image: url("../img/global/down.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 0.6vw 0.6vw;
-  border: 1px solid rgba(8, 60, 130, 0.06);
-  border-radius: 0.4rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-#reset-theme {
-  text-align: center;
-  width: 6vw;
-  height: 1.5vw;
-  font-size: 0.7vw;
-  color: #090a0c;
-  background-color: var(--form-color);
-  border: 1px solid rgba(8, 60, 130, 0.06);
-  border-radius: 0.4rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+
+
 .link a {
   display: flex;
   align-items: center;
@@ -120,11 +89,54 @@ main .bottom {
   text-align: center;
   text-decoration: none;
 }
+ button#joke {
+  margin-top: 5vw;
+  margin-left: 2vw;
+  padding: 0.65vw 1.2vw;
+  border-radius: 0.8vw;
+  font-size: 1.2vw;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  background-color: var(--behindtext-color);
+  color: var(--p-color);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+p#setup {
+  margin-top: 1vw;
+  font-size: 1.4vw;
+  color: white;
+  margin-bottom: 0.75vw;
+  margin-left: 5vw;
+
+  padding: 1vw;
+  margin-right: 5vw;
+}
+p#punchline {
+  margin-top: 1vw;
+  font-size: 1.4vw;
+  color: var(--joke-color);
+  margin-bottom: 0.75vw;
+  margin-left: 5vw;
+
+
+  padding: 1vw;
+  margin-right: 5vw;
+}
 [data-theme="dark"] {
   --bg-img:  url("../img/dark/8.jpg");
   --behindtext-color: #1e4086;
   --p-color: #e0e0e0;
   --form-color: #e0e0e0;
+  --joke-color: #d7f6bc;
+  --joke-backcolor: #204e58;
+
 }
 body {
   background-image: var(--bg-img)
@@ -143,5 +155,17 @@ body {
 
   .link a {
     width: 90%;
+  }
+  button#joke {
+    width: 40vw;
+    height: 6vw;
+    margin-left: 25vw;
+    font-size: 3.5vw;
+  }
+  p#setup {
+    font-size: 3vw;
+  }
+  p#punchline {
+    font-size: 3vw;
   }
 }

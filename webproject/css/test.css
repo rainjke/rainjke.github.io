@@ -90,41 +90,7 @@ main .test .question {
   border-radius: 20px;
   text-align: center;
 }
-.theme {
-  margin-left: 48vw;
-  margin-bottom:  1.5vw;
-}
-#theme-selector {
-  background-clip: padding-box;
-  padding: 0 0.3vw  0 0.3vw;
-  width: 8vw;
-  height: 1.5vw;
-  font-size: 0.7vw;
-  color: #090a0c;
-  background-color: var(--form-color);
-  background-image: url("../img/global/down.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 0.6vw 0.6vw;
-  border: 1px solid rgba(8, 60, 130, 0.06);
-  border-radius: 0.4rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-#reset-theme {
-  text-align: center;
-  width: 6vw;
-  height: 1.5vw;
-  font-size: 0.7vw;
-  color: #090a0c;
-  background-color: var(--form-color);
-  border: 1px solid rgba(8, 60, 130, 0.06);
-  border-radius: 0.4rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+
 main .test .answers {
   display: flex;
   justify-content: space-between;

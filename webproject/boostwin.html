@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -99,11 +99,11 @@
                 name="val-currentLP"
                 aria-label="Select Current RR"
               >
-                <option value="0-20">0-20 RR</option>
-                <option value="21-40">21-40 RR</option>
-                <option value="41-60">41-60 RR</option>
-                <option value="61-80">61-80 RR</option>
-                <option value="81-100">81-100 RR</option>
+                <option id="rr" value="0-20">0-20 RR</option>
+                <option id="rr" value="21-40">21-40 RR</option>
+                <option id="rr" value="41-60">41-60 RR</option>
+                <option id="rr" value="61-80">61-80 RR</option>
+                <option id="rr" value="81-100">81-100 RR</option>
               </select>
             </div>
             <div class="currentimage">
@@ -121,9 +121,9 @@
                 max="10"
                 value="1"
               />
-              <p>Побед: <span id="victoryCount">1</span></p>
-              <p>Стоимость за победу: <span id="victoryCost">1</span></p>
-              <p>Общая стоимость: <span id="totalCost">1</span></p>
+              <p id="bottom">Побед: <span id="victoryCount">1</span></p>
+              <p id="bottom">Стоимость за победу: <span id="victoryCost">1</span></p>
+              <p id="bottom">Общая стоимость: <span id="totalCost">1</span></p>
             </div>
           </div>
         </div>
